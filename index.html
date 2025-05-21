@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FocusPal – Study Timer & Notes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🧠 FocusPal</h1>
+    <p class="subtitle">Stay focused. Take notes. Track progress.</p>
+
+    <div class="clock-container">
+      <h2 id="clock">00:00:00</h2>
+    </div>
+
+    <div class="timer-settings">
+      <label for="timeSelect">Choose Duration:</label>
+      <select id="timeSelect">
+        <option value="15">15 min</option>
+        <option value="25" selected>25 min</option>
+        <option value="30">30 min</option>
+        <option value="45">45 min</option>
+        <option value="60">60 min</option>
+      </select>
+    </div>
+
+    <div class="timer">
+      <h2 id="time">25:00</h2>
+      <button onclick="startTimer()">▶️ Start</button>
+      <button onclick="resetTimer()">🔁 Reset</button>
+    </div>
+
+    <div class="notes">
+      <h3>📝 Your Study Notes</h3>
+      <textarea id="notes" rows="6" placeholder="Write your thoughts, ideas or to-dos here..."></textarea>
+    </div>
+
+    <div class="progress">
+      <h3>✅ Sessions Completed: <span id="sessionCount">0</span></h3>
+      <progress id="focusProgress" value="0" max="10"></progress>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
